@@ -27,7 +27,7 @@ const SearchWorkouts = () => {
         const workoutsData = await fetchData(
           "https://exercisedb.p.rapidapi.com/exercises",
           workoutOptions
-        );
+          );
 
         const searchedWorkouts = workoutsData.filter(
           (item) =>
