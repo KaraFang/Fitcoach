@@ -5,7 +5,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import { workoutOptions, fetchData } from '../Utils/fetchData';
 import WorkoutCard from './WorkoutCard';
 
-const Workouts = ({ workouts, setWorkout, bodyPart }) => {
+const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
     const [currentPage, setCurrentPage] =useState(1);
     const workoutsPerPage = 9;
 
@@ -19,38 +19,58 @@ const Workouts = ({ workouts, setWorkout, bodyPart }) => {
 
     }
 
-  return (
-    <box id="workouts"
-        sx={{mt: {lg: '110px'}}}
-        mt='50px'
-        p='20px'
-    >
-        <Typography variant='h3' mb='46px'>
-            Showing Results
-        </Typography>
-        <Stack direction="row" sx={{ gap: { lg: '110px', xs: '50px'}}}
-        flexWrap="wrap" justifyContent="center">
-            {currentWorkouts.map((workout, index) => (
-                <WorkoutCard key={index} workout={workout} />
-            ))}
+    useEffect(() => {
+        const fetchWorkoutsData = async () => {
+            let workoutsData = [];
 
-        </Stack>
-        <Stack mt="100px" alignItems="center">
-                {workouts.length > 9 && (
-                    <Pagination
-                        color="standard"
-                        shape="rounded"
-                        defaultPage={1}
-                        count={Math.ceil(workouts.length / workoutsPerPage)}
-                        page={currentPage}
-                        onChange={(paginate)}
-                        size="large"
-                    />
-                )}
+            if(bodyPart === 'all') {
+                workoutsData = await fetchData(
+                    "https://exercisedb.p.rapidapi.com/exercises",
+                    workoutOptions
+                );
+            } else {
+                workoutsData = await fetchData(
+                    `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
+                    workoutOptions
+                );
+            }
+            setWorkouts(workoutsData);
+        }
+        fetchWorkoutsData();
+    }, [bodyPart]);
 
-        </Stack>
-    </box>
-  )
+    return (
+      <box id="workouts"
+          sx={{mt: {lg: '110px'}}}
+          mt='50px'
+          p='20px'
+      >
+          <Typography variant='h3' mb='46px'>
+              Showing Results
+          </Typography>
+          <Stack direction="row" sx={{ gap: { lg: '110px', xs: '50px'}}}
+          flexWrap="wrap" justifyContent="center">
+              {currentWorkouts.map((workout, index) => (
+                  <WorkoutCard key={index} workout={workout} />
+              ))}
+  
+          </Stack>
+          <Stack mt="100px" alignItems="center">
+                  {workouts.length > 9 && (
+                      <Pagination
+                          color="standard"
+                          shape="rounded"
+                          defaultPage={1}
+                          count={Math.ceil(workouts.length / workoutsPerPage)}
+                          page={currentPage}
+                          onChange={(paginate)}
+                          size="large"
+                      />
+                  )}
+  
+          </Stack>
+      </box>
+    )
 }
 
 export default Workouts

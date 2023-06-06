@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Workout = () => {
+const WorkoutDetails = () => {
   return (
     <div>Workout</div>
   )
 }
 
-export default Workout
+export default WorkoutDetails

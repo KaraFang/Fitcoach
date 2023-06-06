@@ -3,9 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 import './App.css';
-import logo from './logo.svg';
 import Home from './pages/Home';
-import Workout from './pages/Workout';
+import WorkoutDetails from './pages/WorkoutDetails';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -15,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/workout/:id" element={<Workout />} />
+            <Route path="/workout/:id" element={<WorkoutDetails />} />
         </Routes>
         <Footer />
     </Box>
