@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography, Button } from '@mui/material';
-import Banner from '../Assets/Images/banner.png';
+import Banner from '../assets/images/banner.png';
+
 const HomeIntro = () => {
   return (
     <Box sx={{
