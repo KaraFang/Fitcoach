@@ -13,7 +13,6 @@ const Home = () => {
       <Box>
           <HomeIntro />
           <SearchWorkouts
-          //optional: React context api for replacing props
               setWorkouts={setWorkouts}
               bodyPart={bodyPart}
               setBodyPart={setBodyPart}

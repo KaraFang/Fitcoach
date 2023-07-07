@@ -1,13 +1,12 @@
 body {
     font-family: 'Josefin Sans';
-    background-color: #FFFAFB;
+    background-color: #000000;
   }
   
   * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-  
   }
   
   a:hover, a:focus, a:active, a:visited, a:link{
@@ -68,11 +67,9 @@ body {
   }
   
   .workout-card {
-    width: 400px;
-    height: 445px;
-    background: #fff;
-    border-top: 4px solid #FF2625;
-    border-bottom-left-radius: 20px;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -83,7 +80,7 @@ body {
   }
   
   .workout-card img {
-    height: 326px;
+    height: 350px;
   }
   
   .bodyPart-card {
@@ -91,8 +88,11 @@ body {
     transition: 0.3s all ease-in-out;
   }
   
-  .workout-card:hover,
   .bodyPart-card:hover {
+    background-color: #F5EDED;
+  }
+
+  .workout-card:hover {
     transform: scale(1.1, 1.1);
   }
   

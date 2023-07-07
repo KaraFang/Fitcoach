@@ -1,7 +1,6 @@
 import React from 'react'
 import { Stack, Typography } from '@mui/material';
-
-import Icon from '../assets/images/Logo.png';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
 const BodyParts = ({ item, setBodyPart, bodyPart }) => {
   return (
@@ -11,21 +10,21 @@ const BodyParts = ({ item, setBodyPart, bodyPart }) => {
         justifyContent="center"
         className="bodyPart-card"
         sx={{
-            borderTop: bodyPart === item ? '4px solid #ff2625' : '',
-            backgroundColor: '#fff',
-            borderBottomLeftRadius: '20px',
-            width: '270px',
-            height: '280px',
+            borderTop: bodyPart === item ? '4px solid #D72323' : '',
+            backgroundColor: '#3E3636',
+            borderRadius: '20px',
+            width: '110px',
+            height: '100px',
             cursor: 'pointer',
-            gap: '47px'
+            gap: '2px'
         }}
         onClick={() => {
             setBodyPart(item);
             window.scrollTo({top: 1800, left: 100, behavior: 'smooth'})
         }}
     >
-        <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />   
-        <Typography fontSize="24px" fontWeight="bold" color="#3A1212" textTransform="capitalize">{item}
+        <FitnessCenterIcon style={{ width: '40px', height: '40px', color: '#D72323' }} /> 
+        <Typography fontSize="16px" fontWeight="bold" color="#D72323" textTransform="capitalize">{item}
         </Typography>
     </Stack>
   )
