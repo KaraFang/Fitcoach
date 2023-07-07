@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FF2625;
+    color: #D72323;
     font-size: 25px;
     border-radius: 4px;
     position: absolute;
@@ -34,10 +34,15 @@ body {
     right: 80px;
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    z-index: 1;
   }
   
   .right-arrow {
-    right: 140px;
+    right: 20px;
+  }
+
+  .left-arrow {
+    right: 60px; /* Adjust the right position to create space between the arrows */
   }
   
   .right-arrow:hover,
@@ -89,7 +94,7 @@ body {
   }
   
   .bodyPart-card:hover {
-    background-color: #F5EDED;
+    transform: scale(1.1, 1.1);
   }
 
   .workout-card:hover {
@@ -116,14 +121,8 @@ body {
       height: 300px;
     }
   
-  
     .react-horizontal-scrolling-menu--scroll-container {
       width: 500px;
-    }
-  
-    .left-arrow,
-    .right-arrow {
-      position: static !important;
     }
   
     .hero-banner-img {
@@ -138,12 +137,17 @@ body {
       width: 320px;
       height: 300px;
     }
-  
-  }
-  
-  @media screen and (max-width:400px) {
-    .workout-card {
-      width: 280px;
-    }
   }
 
+  @media screen and (min-width:1175px) {
+    .right-arrow,
+    .left-arrow {
+        display: none;
+    }
+
+    .react-horizontal-scrolling-menu--scroll-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

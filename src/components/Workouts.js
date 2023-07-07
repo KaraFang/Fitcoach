@@ -15,7 +15,10 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
 
     const paginate = (e, value) => {
         setCurrentPage(value);
-        window.scrollTo({ top: 1000, behavior: 'smooth' })
+        const searchResultContainer = document.getElementById("workouts");
+        if (searchResultContainer) {
+          searchResultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     useEffect(() => {
