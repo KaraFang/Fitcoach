@@ -42,7 +42,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
     }, [bodyPart]);
 
     return (
-      <Box id="workouts" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
+      <Box id="workouts" sx={{ mt: { lg: "110px" } }} mt="50px" p="30px">
         <Typography color="#D72323" variant="h3" mb="46px">
           Searched Results
         </Typography>
@@ -65,7 +65,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
                 },
                 "& .Mui-selected": {
                   color: "#F5EDED",
-                  background: "#D72323",
+                  backgroundColor: "#D72323",
                 },
               }}
               defaultPage={1}

@@ -11,19 +11,19 @@ const Home = () => {
   
     return (
       <Box>
-          <HomeIntro />
-          <SearchWorkouts
-              setWorkouts={setWorkouts}
-              bodyPart={bodyPart}
-              setBodyPart={setBodyPart}
-          />
-          <Workouts
-              workouts={workouts}
-              setWorkouts={setWorkouts}
-              bodyPart={bodyPart}
-           />
+        <HomeIntro />
+        <SearchWorkouts
+          setWorkouts={setWorkouts}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
+        />
+        <Workouts
+          workouts={workouts}
+          setWorkouts={setWorkouts}
+          bodyPart={bodyPart}
+        />
       </Box>
-    )
+    );
 }
 
 export default Home

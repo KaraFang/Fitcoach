@@ -1,6 +1,5 @@
 import React from 'react'
 import { Stack, Typography } from '@mui/material';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
 const BodyParts = ({ item, setBodyPart, bodyPart }) => {
   return (
@@ -20,10 +19,8 @@ const BodyParts = ({ item, setBodyPart, bodyPart }) => {
       }}
       onClick={() => {
         setBodyPart(item);
-        window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
-      {/* <FitnessCenterIcon style={{ width: '30px', height: '30px', color: '#D72323' }} />  */}
       <Typography
         fontSize="14px"
         fontWeight="bold"
