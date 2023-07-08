@@ -20,6 +20,7 @@ const Footer = () => (
     </Stack>
     <Typography
       variant="h5"
+      color="#F5EDED"
       sx={{ fontSize: { lg: "20px", xs: "16px" } }}
       textAlign="center"
       py="10px"
