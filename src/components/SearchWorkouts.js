@@ -45,30 +45,31 @@ const SearchWorkouts = ({ setWorkouts, bodyPart, setBodyPart }) => {
       <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
         <Box position="relative" mb="72px">
           <TextField
+            autoComplete="off"
             sx={{
               input: {
                 fontWeight: "500",
-                fontSize: "24px",
+                fontSize: { md: "24px", xs: "16px" },
                 border: "none",
                 color: "#F5EDED",
               },
-              width: { lg: "600px", xs: "350px" },
+              width: { md: "600px", xs: "300px" },
               "& .MuiInputBase-root": {
-                height: 53,
+                height: { md: 53, xs: 40 },
               },
-              height: "50px",
+              height: { md: 53, xs: 40 },
               borderRadius: "6px",
               border: "1px solid #D72323",
               "& .MuiOutlinedInput": {
                 "& > fieldset": {
-                  height: "53px",
+                  height: { md: 53, xs: 40 },
                 },
               },
               "& .MuiOutlinedInput-root.Mui-focused": {
                 "& > fieldset": {
                   boxShadow: "0px 0px 5px 3px #D72323",
                   border: "#D72323",
-                  height: "53px",
+                  height: { md: 56, xs: 43 },
                 },
               },
             }}
@@ -84,11 +85,11 @@ const SearchWorkouts = ({ setWorkouts, bodyPart, setBodyPart }) => {
               color: "#000000",
               borderRadius: "0 6px 6px 0",
               textTransform: "none",
-              width: { lg: "100px", xs: "80px" },
-              height: "50px",
+              width: { md: "100px", xs: "80px" },
+              height: { md: 53, xs: 40 },
               position: "absolute",
               right: "0px",
-              fontSize: { lg: "20px", xs: "14px" },
+              fontSize: { md: "20px", xs: "14px" },
             }}
             onClick={handleSearch}
           >

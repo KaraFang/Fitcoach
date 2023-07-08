@@ -42,13 +42,13 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
     }, [bodyPart, setWorkouts]);
 
     return (
-      <Box id="workouts" sx={{ mt: { lg: "110px" } }} mt="50px" p="30px">
+      <Box id="workouts" sx={{ mt: { md: "110px" } }} mt="50px" p="30px">
         <Typography color="#D72323" variant="h3" mb="46px">
           Searched Results
         </Typography>
         <Stack
           direction="row"
-          sx={{ gap: { lg: "70px", xs: "40px" } }}
+          sx={{ gap: { md: "70px", xs: "40px" } }}
           flexWrap="wrap"
           justifyContent="center"
         >

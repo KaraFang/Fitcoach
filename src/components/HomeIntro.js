@@ -7,58 +7,52 @@ const HomeIntro = () => {
   return (
     <Box
       sx={{
-        mt: { lg: "50px", xs: "30px" },
+        mt: { md: "50px", xs: "30px" },
         position: "relative",
         backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%), url(${Banner})`,
         backgroundSize: "auto 100%",
         backgroundPosition: "top left",
         backgroundRepeat: "no-repeat",
+        overflow: "hidden",
       }}
       position="relative"
     >
       <Stack
         direction="column"
         justifyContent="center"
-        alignItems="flex-start"
-        sx={{ marginLeft: "60%" }}
+        alignItems="flex-end"
+        sx={{
+          marginRight: "30px",
+        //   marginLeft: "auto",
+        }}
       >
-
         <Typography
-          color="#D72323"
+          color="#F5EDED"
           fontWeight={700}
-          sx={{ fontSize: { lg: "44px", xs: "40px" } }}
-          mb="23px"
-          mt="30px"
+          sx={{ fontSize: { md: "80px", sm: "40px", xs: "30px" } }}
+          mb="20px"
+          mt="50px"
         >
-          Sweat, Smile <br /> and Repeat
+          It's time to <br /> Sweat!
         </Typography>
 
-        <Typography
-          color="#D72323"
-          fontSize="22px"
-          lineHeight="35px"
-          mb={3}
-        >
-          Check out the most effective workouts
-        </Typography>
-
-        <Button
+        {/* <Button
           variant="contained"
           color="error"
           href="#workouts"
           sx={{ backgroundColor: "#D72323", padding: "15px" }}
         >
           Explore Workouts
-        </Button>
+        </Button> */}
 
         <Typography
           fontWeight={600}
-          color="#ff2625"
+          color="#D72323"
           sx={{
             opacity: 0.1,
-            display: { lg: "block", xs: "none" },
+            fontSize: { md: "180px", sm: "80px", xs: "60px" },
+            display: { md: "block", xs: "block" },
           }}
-          fontSize="200px"
         >
           Workout
         </Typography>
