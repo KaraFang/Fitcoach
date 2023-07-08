@@ -39,7 +39,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
             setWorkouts(workoutsData);
         }
         fetchWorkoutsData();
-    }, [bodyPart]);
+    }, [bodyPart, setWorkouts]);
 
     return (
       <Box id="workouts" sx={{ mt: { lg: "110px" } }} mt="50px" p="30px">

@@ -45,12 +45,32 @@ const SearchWorkouts = ({ setWorkouts, bodyPart, setBodyPart }) => {
       <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
         <Box position="relative" mb="72px">
           <TextField
-            height="76px"
             sx={{
-              input: { fontWeight: "700", border: "none", borderRadius: "4px" },
-              width: { lg: "1170px", xs: "350px" },
-              backgroundColor: "#fff",
-              borderRadius: "40px",
+              input: {
+                fontWeight: "500",
+                fontSize: "24px",
+                border: "none",
+                color: "#F5EDED",
+              },
+              width: { lg: "600px", xs: "350px" },
+              "& .MuiInputBase-root": {
+                height: 53,
+              },
+              height: "50px",
+              borderRadius: "6px",
+              border: "1px solid #D72323",
+              "& .MuiOutlinedInput": {
+                "& > fieldset": {
+                  height: "53px",
+                },
+              },
+              "& .MuiOutlinedInput-root.Mui-focused": {
+                "& > fieldset": {
+                  boxShadow: "0px 0px 5px 3px #D72323",
+                  border: "#D72323",
+                  height: "53px",
+                },
+              },
             }}
             value={search}
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
@@ -60,11 +80,12 @@ const SearchWorkouts = ({ setWorkouts, bodyPart, setBodyPart }) => {
           <Button
             className="search-btn"
             sx={{
-              bgcolor: "#FF2625",
-              color: "#fff",
+              backgroundColor: "#D72323",
+              color: "#000000",
+              borderRadius: "0 6px 6px 0",
               textTransform: "none",
-              width: { lg: "175px", xs: "80px" },
-              height: "56px",
+              width: { lg: "100px", xs: "80px" },
+              height: "50px",
               position: "absolute",
               right: "0px",
               fontSize: { lg: "20px", xs: "14px" },
@@ -75,13 +96,14 @@ const SearchWorkouts = ({ setWorkouts, bodyPart, setBodyPart }) => {
           </Button>
         </Box>
         <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
-          <HorizontalScrollbar data={bodyParts} 
+          <HorizontalScrollbar
+            data={bodyParts}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
           />
         </Box>
       </Stack>
-  );
+    );
 }
 
 export default SearchWorkouts
