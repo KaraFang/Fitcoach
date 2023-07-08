@@ -56,7 +56,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
             <WorkoutCard key={index} workout={workout} />
           ))}
         </Stack>
-        <Stack mt="100px" alignItems="center">
+        <Stack my="100px" alignItems="center">
           {workouts.length > 9 && (
             <Pagination
               sx={{
