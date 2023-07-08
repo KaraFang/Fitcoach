@@ -7,7 +7,7 @@ const workoutCard = ({ workout }) => {
   return (
     <Link
       className="workout-card"
-      to={`/workout/${workout.id}`}
+    //   to={`/workout/${workout.id}`}
     >
       <div className="workout-card-img">
         <img src={workout.gifUrl} alt={workout.name} Loading="lazy" />
