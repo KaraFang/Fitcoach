@@ -65,7 +65,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
                 },
                 "& .Mui-selected": {
                   color: "#F5EDED",
-                  backgroundColor: "#D72323",
+                  backgroundColor: "#D72323 !important",
                 },
               }}
               defaultPage={1}
