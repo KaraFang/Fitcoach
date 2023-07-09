@@ -53,7 +53,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
           justifyContent="center"
         >
           {currentWorkouts.map((workout, index) => (
-            <WorkoutCard key={index} workout={workout} />
+            <WorkoutCard key={index} workout={workout} sx={{ marginRight: "50px", marginBottom: "50px" }}/>
           ))}
         </Stack>
         <Stack my="100px" alignItems="center">
