@@ -46,16 +46,19 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
         <Typography color="#D72323" variant="h3" mb="46px">
           Searched Results
         </Typography>
-        <Stack
-          direction="row"
-          sx={{ gap: "50px" }}
-          flexWrap="wrap"
-          justifyContent="center"
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "50px",
+          }}
         >
           {currentWorkouts.map((workout, index) => (
-            <WorkoutCard key={index} workout={workout} sx={{ marginRight: "50px", marginBottom: "50px" }}/>
+            <WorkoutCard key={index} workout={workout} />
           ))}
-        </Stack>
+        </div>
         <Stack my="100px" alignItems="center">
           {workouts.length > 9 && (
             <Pagination
