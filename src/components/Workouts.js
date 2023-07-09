@@ -48,7 +48,7 @@ const Workouts = ({ workouts, setWorkouts, bodyPart }) => {
         </Typography>
         <Stack
           direction="row"
-          sx={{ gap: { md: "70px", xs: "40px" } }}
+          sx={{ gap: "50px" }}
           flexWrap="wrap"
           justifyContent="center"
         >
