@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography, Button, Stack } from '@mui/material';
-import Banner from '../assets/images/banner.png';
+import Homebg from '../assets/images/homebg.png';
 
 
 const HomeIntro = () => {
@@ -9,7 +9,7 @@ const HomeIntro = () => {
       sx={{
         mt: { md: "50px", xs: "30px" },
         position: "relative",
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%), url(${Banner})`,
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%), url(${Homebg})`,
         backgroundSize: "auto 100%",
         backgroundPosition: "top left",
         backgroundRepeat: "no-repeat",
