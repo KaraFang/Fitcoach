@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography, Button, Stack } from '@mui/material';
-import Homebg from '../assets/images/homebg.png';
+import Homebg from '../assets/images/Homebg.png';
 
 
 const HomeIntro = () => {
